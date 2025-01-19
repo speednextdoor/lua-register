@@ -18,4 +18,4 @@ find the luaL_register address in disassembly by locating any laux.cpp functions
 or you can type _LOADED and you can view it like that
 ps: you can also find luaL->findtable
 
-you can also direct message me on discord. this is an alternative to shuffles. YOU MAY need other luau funcs but i can always post this on here
+you can also direct message me on discord. YOU MAY need other luau funcs but i can always post this on here
