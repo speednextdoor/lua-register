@@ -1,4 +1,4 @@
- uintptr_t rebase(uintptr_t addy) {
+ uintptr_t rebase(uintptr_t addy) { // simple rebasing
     return addy + reinterpret_cast<uintptr_t>(GetModuleHandleW(0));
 }
 
