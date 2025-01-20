@@ -1,9 +1,9 @@
  uintptr_t rebase(uintptr_t addy) { // simple rebasing
-    return addy + reinterpret_cast<uintptr_t>(GetModuleHandleW(0));
+    return addy + reinterpret_cast<uintptr_t>(GetModuleHandleW(0)); // add addie with base addie
 }
 
 using luaL_register_t = void(__fastcall*)(lua_State* L, const char* libname, const luaL_Reg* l); // it will show as int for first arg, char for second and int again for third, thats just the pseudo. originally, this was meant for use with shuffles. 
-luaL_register_t luaL_register = reinterpret_cast<luaL_register_t>(rebase(0x22EF180)); // add addie with base adddie
+luaL_register_t luaL_register = reinterpret_cast<luaL_register_t>(rebase(0x22EF180)); // updated as of 1/20/2025
 
 // usage example
  static int hi(lua_State* L) // as stated, depends how you get lua state; i use the actual struct i use shuffles
