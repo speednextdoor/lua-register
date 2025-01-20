@@ -12,6 +12,8 @@ luaL_register_t luaL_register = reinterpret_cast<luaL_register_t>(rebase(0x22EF1
      return 1;
  }
 
+// now we need to do it under a lib. our 3rd argument is luas registery functions it expects us to give it a "lib"
+
  static const luaL_Reg thunderlib[] = { // register under lib
      {"hi", hi}, // pushcfunction hi, setglobal hi you may think huh
      {"hitest2", hi}, // dont stop the commas but you can add as much as you want
@@ -32,3 +34,7 @@ lua_State* luastatethingie; // now just cast your actual lua state  here
 void main() {
 shit(luastatethingie); // register funcs
 }; //oops do not check commit history i thought it was luau (dementia problems 100%)
+
+// now you should have hi in your env
+// test this by doing
+// if hi then print"good boy you got it working" else warn"nope you did smth wrong dum ass boy" end
